@@ -1,4 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+/* Typographies / Couleurs (exemples : titres, paragraphes, liens, etc.)
+========================================================================== */
 h1 {
     color: red;
     background-color: aqua;
 }
+p {
+    color: rgb(255, 123, 0);
+}
+h2 {
+    color: seashell;
+}
+/* Mise en page (positionnement)
+========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flexHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    background-color: rgb(131, 225, 225);
+}
+main {
+    background-image: url(../media/Background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+}
+img {
+    width: 100%;
+}
+/* Header / Navigations / Footer 
+========================================================================== */
+nav {
+    text-align: right;
+    width: 75%;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+    margin: 0% 1%;
+    padding: 0% 1%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+nav a {
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(255, 123, 0);
+}
+nav a:hover {
+    transition: color 0.4s, 0.4s;
+    color: red;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.flexFooter {
+    color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.flexFooter2 {
+    color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-top: solid 4px black;
+}
+a:active img {
+    content: url("../media/LogoB.png");
+}
+
+/* Page d'accueil
+========================================================================== */
+.section1 {
+    height: 1000px;
+}
+/* Réservation
+========================================================================== */
+
+/* Restaurant
+========================================================================== */
+
+/* Ma commande
+========================================================================== */
