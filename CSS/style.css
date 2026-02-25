@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+}
 /* Typographies / Couleurs (exemples : titres, paragraphes, liens, etc.)
 ========================================================================== */
 h1 {
@@ -10,7 +13,7 @@ h1 {
 }
 p {
     color: rgb(255, 123, 0);
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1%;
 }
 h2 {
@@ -61,17 +64,33 @@ nav a:hover {
 .flexFooter {
     color: rgb(255, 123, 0);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 }
 .flexFooter2 {
     color: rgb(255, 123, 0);
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
+}
+.flexFooter2 p {
+    text-decoration: underline;
+}
+.flexFooter2-1 {
+    display: flex;
+    justify-content: flex-end;
+}
+.flexFooter2-1 p {
+    text-decoration: underline;
+    margin: 0% 5%;
+}
+.flexEND {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
     border-top: solid 4px black;
 }
-a:active img {
+.logo a:active img {
     content: url("../media/logoGB2.png");
 }
 
@@ -130,29 +149,66 @@ a.headerButton {
 
 .img.clientsatisfaitimage {
     border-radius: 100%;
-    max-width: 30%;
-    margin-left: 20px;
+    max-width: 27%;
+    margin-left: 3%;
+    margin-top: 2%;
     border-width: 4px;
     border-color: #d4c254;
     border-style: solid;
+}
+.img.clientsatisfaitimage img {
+    width: 100%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 3fr 3fr;
+    grid-template-rows: 4fr 4fr;
 }
 .grid-items {
-    border: solid 4px black;
+    border: solid 4px rgb(255, 123, 0);
     margin: 3%;
     background: linear-gradient(
         to bottom,
-        #986532 0%,
-        #f7f0f5 50%,
+        #dc7e1f 0%,
+        #ebe3d5 50%,
         #f7f0f5 100%
     );
+    display: grid;
+    grid-template-rows: 40% 60%;
 }
-
+.grid-items p {
+    font-style: italic;
+    margin: 2% 5%;
+}
+.grid-in {
+    display: flex;
+    /* img {
+        width: 100%;
+    } */
+}
+.grid-in p {
+    margin-top: 10%;
+    font-weight: 900;
+    font-size: large;
+    color: rgb(62, 36, 4);
+}
+/* Lien réseaux sociaux
+========================================================================== */
+.reseaux {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    max-width: 700px;
+    justify-content: space-between;
+}
+.container2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container2 body {
+    background-color: aliceblue;
+}
 /* Réservation
 ========================================================================== */
 
