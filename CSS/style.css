@@ -161,19 +161,15 @@ a.headerButton {
 /*client satisfaits
 ========================================================================== */
 
-.img.clientsatisfaitimage {
-    border-radius: 100%;
+img.clientsatisfaitimage {
+    border-radius: 50%;
     max-width: 27%;
     margin-left: 3%;
     margin-top: 2%;
-    border-width: 4px;
-    border-color: #d4c254;
-    border-style: solid;
+    border: 4px solid #d4c254;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
-.img.clientsatisfaitimage img {
-    width: 100%;
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
@@ -189,17 +185,16 @@ a.headerButton {
         #f7f0f5 100%
     );
     display: grid;
-    grid-template-rows: 40% 60%;
+    grid-template-rows: 50% 50%;
 }
 .grid-items p {
     font-style: italic;
-    margin: 2% 5%;
+    margin: 3% 5%;
 }
 .grid-in {
     display: flex;
-    /* img {
-        width: 100%;
-    } */
+    align-items: center;
+    gap: 10px;
 }
 .grid-in p {
     margin-top: 10%;
@@ -225,7 +220,45 @@ a.headerButton {
 }
 /* Réservation
 ========================================================================== */
-
+.red-dot {
+    color: red;
+    font-weight: bold;
+}
+form {
+    color: rgb(214, 173, 134);
+}
+.contact1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+}
+.contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 2%;
+}
+.contact22 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+input {
+    margin: 2%;
+}
+#nbr-quantite {
+    width: 60px;
+}
+.formSend p {
+    border: solid 5px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgb(126, 237, 154);
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 1% 20%;
+}
 /* Restaurant
 ========================================================================== */
 
