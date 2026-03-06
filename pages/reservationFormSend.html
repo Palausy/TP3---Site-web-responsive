@@ -31,204 +31,251 @@
         <main>
             <h1>Les Burgers c'est la vie !</h1>
             <h2>RESERVATION</h2>
-
             <form
-                action="../pages/reservationFormSend#formSend.html"
+                action="../pages/reservation.html"
                 method="get"
                 id="frm-reservation"
             >
-                <fieldset>
+                <fieldset class="formSpace">
                     <legend>FORMUBURGER</legend>
-                    <div class="contact1">
-                        <div>
-                            <label for="txt-prenom"
-                                >Votre prénom<strong class="red-dot">*</strong>
-                                :</label
-                            >
-                            <input
-                                type="text"
-                                id="txt-prenom"
-                                name="txt-prenom"
-                                maxlength="20"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label for="txt-nom"
-                                >Votre nom<strong class="red-dot">*</strong>
-                                :</label
-                            >
-                            <input
-                                type="text"
-                                id="txt-nom"
-                                name="txt-nom"
-                                maxlength="20"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label for="txt-num"
-                                >Votre numéro<strong class="red-dot">*</strong>
-                                :</label
-                            ><input
-                                type="text"
-                                id="txt-num"
-                                name="txt-num"
-                                minlength="10"
-                                maxlength="12"
-                                placeholder="514-123-4567"
-                                required
-                            />
-                        </div>
-                    </div>
-
-                    <fieldset>
-                        <legend>Votre reservation</legend>
-                        <div class="contact22">
-                            <div class="contact2">
-                                <div>
-                                    <label for="nbr-quanti"
-                                        >Nombre de personnes<strong
-                                            class="red-dot"
-                                            >*</strong
-                                        ></label
-                                    >
-                                    <input
-                                        type="number"
-                                        id="nbr-quantite"
-                                        name="nbr-quantite"
-                                        min="1"
-                                        max="8"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label for="date-resevatioin"
-                                        >Dâte de réservation<strong
-                                            class="red-dot"
-                                            >*</strong
-                                        ></label
-                                    >
-                                    <input
-                                        type="date"
-                                        name="date-reservation"
-                                        min="2026-03-20"
-                                        max="2026-12-31"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label for="hours"
-                                        >Heures de reservation<strong
-                                            class="red-dot"
-                                            >*</strong
-                                        ></label
-                                    >
-                                    <select
-                                        name="sel-aliment"
-                                        id="hours"
-                                        required
-                                    >
-                                        <option value="" selected>
-                                            Faire un choix
-                                        </option>
-                                        <option value="12pm">12 : 00</option>
-                                        <option value="12pm30">12 : 30</option>
-                                        <option value="13pm">13 : 00</option>
-                                        <option value="13pm30">13 : 30</option>
-                                        <option value="13pm30">17 : 00</option>
-                                        <option value="13pm30">17 : 30</option>
-                                        <option value="13pm30">18 : 00</option>
-                                        <option value="13pm30">18 : 30</option>
-                                        <option value="13pm30">19 : 00</option>
-                                        <option value="13pm30">19 : 30</option>
-                                        <option value="13pm30">20 : 00</option>
-                                        <option value="13pm30">20 : 30</option>
-                                        <option value="13pm30">21 : 00</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <fieldset>
-                                    <legend>
-                                        Ou voulez vous manger
+                    <div class="form-container">
+                        <div class="formBg">
+                            <div class="contact1">
+                                <div class="form-group">
+                                    <label for="txt-prenom">
+                                        Votre prénom
                                         <strong class="red-dot">*</strong>
-                                    </legend>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="txt-prenom"
+                                        name="prenom"
+                                        maxlength="20"
+                                    />
+                                </div>
 
-                                    <div>
-                                        <input
-                                            type="radio"
-                                            name="rdo-navigateur"
-                                            value="sam"
-                                            checked
-                                        />
-                                        <label for="format-txt"
-                                            >Salle a manger
-                                        </label>
+                                <div class="form-group">
+                                    <label for="txt-nom">
+                                        Votre nom
+                                        <strong class="red-dot">*</strong>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="txt-nom"
+                                        name="nom"
+                                        maxlength="20"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="txt-num">
+                                        Votre numéro
+                                        <strong class="red-dot">*</strong>
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="txt-num"
+                                        name="telephone"
+                                        minlength="10"
+                                        maxlength="12"
+                                        placeholder="514-123-4567"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Reservation -->
+                            <fieldset class="formSpace">
+                                <legend>Votre réservation</legend>
+
+                                <div class="contact22">
+                                    <div class="contact2">
+                                        <div class="form-group">
+                                            <label for="nbr-quantite">
+                                                Nombre de personnes
+                                                <strong class="red-dot"
+                                                    >*</strong
+                                                >
+                                            </label>
+                                            <input
+                                                type="number"
+                                                id="nbr-quantite"
+                                                name="quantite"
+                                                min="1"
+                                                max="8"
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="date-reservation">
+                                                Date de réservation
+                                                <strong class="red-dot"
+                                                    >*</strong
+                                                >
+                                            </label>
+                                            <input
+                                                type="date"
+                                                id="date-reservation"
+                                                name="date-reservation"
+                                                min="2026-03-20"
+                                                max="2026-12-31"
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="hours">
+                                                Heure de réservation
+                                                <strong class="red-dot"
+                                                    >*</strong
+                                                >
+                                            </label>
+                                            <select id="hours" name="heure">
+                                                <option value="">
+                                                    Faire un choix
+                                                </option>
+
+                                                <option value="12:00">
+                                                    12:00
+                                                </option>
+                                                <option value="12:30">
+                                                    12:30
+                                                </option>
+                                                <option value="13:00">
+                                                    13:00
+                                                </option>
+                                                <option value="13:30">
+                                                    13:30
+                                                </option>
+
+                                                <option value="17:00">
+                                                    17:00
+                                                </option>
+                                                <option value="17:30">
+                                                    17:30
+                                                </option>
+                                                <option value="18:00">
+                                                    18:00
+                                                </option>
+                                                <option value="18:30">
+                                                    18:30
+                                                </option>
+
+                                                <option value="19:00">
+                                                    19:00
+                                                </option>
+                                                <option value="19:30">
+                                                    19:30
+                                                </option>
+                                                <option value="20:00">
+                                                    20:00
+                                                </option>
+                                                <option value="20:30">
+                                                    20:30
+                                                </option>
+
+                                                <option value="21:00">
+                                                    21:00
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
 
-                                    <div>
-                                        <input
-                                            type="radio"
-                                            id="firefox"
-                                            name="rdo-navigateur"
-                                            value="trtr"
-                                        />
-                                        <label for="format-txt"
-                                            >Terrasse
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input
-                                            type="radio"
-                                            id="sav"
-                                            name="rdo-navigateur"
-                                            value="frfx"
-                                        />
-                                        <label for="format-txt"
-                                            >Service au volant</label
-                                        >
-                                    </div>
-                                </fieldset>
+                                    <!-- emplacement -->
+                                    <fieldset class="place-choice formSpace">
+                                        <legend>
+                                            Où voulez-vous manger
+                                            <strong class="red-dot">*</strong>
+                                        </legend>
+
+                                        <div>
+                                            <input
+                                                type="radio"
+                                                id="salle"
+                                                name="emplacement"
+                                                value="salle"
+                                                checked
+                                            />
+                                            <label for="salle"
+                                                >Salle à manger</label
+                                            >
+                                        </div>
+
+                                        <div>
+                                            <input
+                                                type="radio"
+                                                id="terrasse"
+                                                name="emplacement"
+                                                value="terrasse"
+                                            />
+                                            <label for="terrasse"
+                                                >Terrasse</label
+                                            >
+                                        </div>
+
+                                        <div>
+                                            <input
+                                                type="radio"
+                                                id="volant"
+                                                name="emplacement"
+                                                value="volant"
+                                            />
+                                            <label for="volant"
+                                                >Service au volant</label
+                                            >
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </fieldset>
+
+                            <!-- commentaire -->
+                            <div class="form-group">
+                                <label for="commentaire">Commentaire :</label>
+                                <textarea
+                                    id="commentaire"
+                                    name="commentaire"
+                                    maxlength="250"
+                                    rows="4"
+                                ></textarea>
+                            </div>
+
+                            <!-- contact -->
+                            <fieldset>
+                                <legend>infolettre</legend>
+
+                                <div class="form-group">
+                                    <label for="contact-email">Email</label>
+                                    <input
+                                        type="email"
+                                        id="contact-email"
+                                        name="email"
+                                        placeholder="adresse@email.com"
+                                    />
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <label for="ckb-liste"
+                                        >Recevoir l’infolettre</label
+                                    >
+                                    <input
+                                        type="checkbox"
+                                        id="ckb-liste"
+                                        name="infolettre"
+                                    />
+                                </div>
+                            </fieldset>
+
+                            <div class="form-submit">
+                                <input type="submit" value="RETOUR" />
+                            </div>
+                            <div class="formSendBg"></div>
+                        </div>
+                        <div class="formSend">
+                            <div id="formSend" class="formSend">
+                                <p>"Confirmation de votre réservation"</p>
                             </div>
                         </div>
-                    </fieldset>
-
-                    <div>
-                        <textarea
-                            name="txt-message"
-                            id="commantaire"
-                            maxlength="250"
-                        >
-                        </textarea>
-                        <label for="txt-message">Commantaire</label>
-                    </div>
-                    <fieldset>
-                        <legend>Contact</legend>
-                        <input
-                            type="email"
-                            id="contct"
-                            name="mail-compte"
-                            placeholder="adresse@email.com"
-                        />
-                        <label for="contact">email</label>
-                        <input
-                            id="ckb-liste"
-                            type="checkbox"
-                            name="ckb-liste"
-                        />
-                        <label for="ckb-liste">Infolettre</label>
-                    </fieldset>
-
-                    <div>
-                        <input type="submit" value="Créer mon compte" />
                     </div>
                 </fieldset>
             </form>
-            <div id="formSend" class="formSend">
-                <p>Confirmation de votre réservation”.</p>
-            </div>
         </main>
 
         <footer id="footerIndex">

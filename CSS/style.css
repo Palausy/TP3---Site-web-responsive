@@ -226,11 +226,40 @@ img.clientsatisfaitimage {
 }
 form {
     color: rgb(214, 173, 134);
+    background-image: url("../media/bgLarge.jpg");
+    width: 100%;
+    background-size: cover;
+}
+.formBg {
+    background-color: #381e0483;
+    padding: 2%;
+}
+.formSendBg {
+    background-color: rgb(126, 237, 154);
+    padding: 2%;
+}
+.formSpace {
+    padding: 2%;
+    margin: 5% 0%;
+}
+legend {
+    font-weight: 900;
 }
 .contact1 {
     display: flex;
-    justify-content: space-around;
-    padding: 3%;
+    gap: 20px;
+}
+
+.contact1 .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact1 input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
 }
 .contact2 {
     display: flex;
@@ -242,7 +271,11 @@ form {
 .contact22 {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
+}
+.form-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
 input {
     margin: 2%;
@@ -256,9 +289,36 @@ input {
     background-color: rgb(126, 237, 154);
     text-align: center;
     font-weight: 900;
-    font-size: 2rem;
-    margin: 1% 20%;
+    font-size: 1.5rem;
+    margin: 1% 5%;
 }
+.formSend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    resize: none;
+}
+.form-group {
+    display: flex;
+    direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+input {
+    background-color: rgba(95, 48, 4, 0.493);
+    color: antiquewhite;
+}
+
 /* Restaurant
 ========================================================================== */
 
