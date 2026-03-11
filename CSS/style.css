@@ -392,3 +392,56 @@ section {
 
 /* Ma commande
 ========================================================================== */
+.tableau50 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.tableau50 h2 {
+    margin-bottom: 0%;
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+    padding: 2%;
+    color: rgb(255, 123, 0);
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+td {
+    padding: 2%;
+    color: rgb(219, 206, 195);
+    text-align: center;
+}
+tfoot td {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgb(228, 217, 206);
+    text-shadow: black 1px 1px 2px;
+}
+
+.commandeTableau4 {
+    padding: 3%;
+    margin-top: 12%;
+    background-color: seagreen;
+}
+.commandeTableau4 table {
+    margin-bottom: 10%;
+}
+.commandeTableau4 a {
+    align-items: center;
+    color: #f1e49b;
+    background-color: rgb(72, 39, 7);
+    border-color: rgb(255, 123, 0);
+}
+.colorTableau {
+    background-color: seagreen;
+}
+.colorTableau th:first-child,
+.colorTableau td:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
