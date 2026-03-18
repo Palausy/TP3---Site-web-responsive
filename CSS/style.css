@@ -19,6 +19,11 @@ p {
 h2 {
     color: seashell;
 }
+figcaption {
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 0%;
+}
 /* Mise en page (positionnement)
 ========================================================================== */
 .container {
@@ -26,6 +31,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .flexHead {
     display: flex;
     justify-content: space-between;
@@ -107,6 +113,9 @@ nav a:hover {
     align-items: center;
     border-top: solid 4px black;
 }
+.logoMenu {
+    display: none;
+}
 
 /* Page d'accueil
 ========================================================================== */
@@ -185,11 +194,13 @@ img.clientsatisfaitimage {
         #f7f0f5 100%
     );
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 45% 55%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .grid-items p {
     font-style: italic;
-    margin: 3% 5%;
+    margin: 1% 5% 3% 5%;
 }
 .grid-in {
     display: flex;
@@ -334,6 +345,7 @@ input {
     justify-content: center;
     border: 3px solid rgb(255, 123, 0);
 }
+
 .box img {
     width: 100%;
     height: 100%;
@@ -389,6 +401,17 @@ section {
     padding: 1%;
     font-size: large;
 }
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* Ma commande
 ========================================================================== */
@@ -402,6 +425,10 @@ section {
 table {
     width: 90%;
     border-collapse: collapse;
+}
+th,
+td {
+    width: 33.33%;
 }
 th {
     text-align: left;
@@ -444,4 +471,138 @@ tfoot td {
 .colorTableau td:first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+/* Media Queries 
+========================================================================== */
+
+/* M-Q Header 960px
+==================================================*/
+@media screen and (min-width: 570px) and (max-width: 960px) {
+    body {
+        background-color: red;
+    }
+    nav {
+        display: none;
+    }
+    .logoMenu {
+        display: block;
+    }
+    .flexHead {
+        justify-content: space-around;
+    }
+    /* M-Q Main 960px
+==================================================*/
+    .flexSection1 {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flexS1-1 {
+        width: 90%;
+        line-height: 1rem;
+        margin-bottom: 2%;
+    }
+    /* M-Q Resto 960px
+==================================================*/
+    .grid-container {
+        grid-template-columns: 50% 50%;
+    }
+    img.clientsatisfaitimage {
+        max-width: 25%;
+    }
+
+    .grid-container2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .big1 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .big2 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: 0;
+    }
+    .map-container {
+        margin-top: 20%;
+    }
+    .mediaQueries {
+        margin: 0% 5%;
+        padding: 0% 5%;
+    }
+}
+
+/* M-Q Header 570px
+==================================================*/
+@media screen and (max-width: 570px) {
+    body {
+        background-color: rgb(0, 255, 110);
+    }
+    nav {
+        display: none;
+    }
+    .logoMenu {
+        display: block;
+    }
+    .flexHead {
+        justify-content: space-around;
+    }
+
+    /* M-Q Main 570px
+==================================================*/
+    .flexSection1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6%;
+    }
+    .flexS1-1 {
+        width: 90%;
+        line-height: 1rem;
+        margin-bottom: 2%;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 4fr 4fr;
+    }
+    img.clientsatisfaitimage {
+        max-width: 20%;
+    }
+
+    .grid-container2 {
+        grid-template-columns: 1fr;
+    }
+
+    .big1,
+    .big2 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .map-container {
+        margin-top: 50%;
+        height: 200px;
+    }
+    .restoBoxContact {
+        justify-content: flex-end;
+    }
+    .restoBoxContact p {
+        font-size: 0.7rem;
+    }
+    .restoBoxContact a {
+        font-size: 0.7rem;
+    }
+    .mediaQueries {
+        margin: 0% 5%;
+        padding: 0% 5%;
+    }
 }
