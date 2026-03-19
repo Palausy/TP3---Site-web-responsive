@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Knewave&family=Oregano:ital@0;1&family=Pacifico&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
 * {
     box-sizing: border-box;
 }
@@ -7,9 +8,10 @@ img {
 /* Typographies / Couleurs (exemples : titres, paragraphes, liens, etc.)
 ========================================================================== */
 h1 {
-    color: red;
-    background-color: aqua;
+    color: rgb(38, 37, 36);
+    background-color: seagreen;
     padding: 2%;
+    text-align: center;
 }
 p {
     color: rgb(255, 123, 0);
@@ -24,12 +26,26 @@ figcaption {
     margin-top: 0%;
     padding-top: 0%;
 }
+.maCommande {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+body {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-optical-sizing: auto;
+}
 /* Mise en page (positionnement)
 ========================================================================== */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+.mediaQueries {
+    padding: 0% 1%;
 }
 
 .flexHead {
@@ -46,8 +62,12 @@ body {
 nav {
     text-align: right;
     width: 75%;
+    align-items: center;
 }
-
+nav ul {
+    margin-right: 2%;
+    padding-left: 2%;
+}
 nav li {
     display: inline-block;
     text-align: center;
@@ -57,14 +77,14 @@ nav li {
     font-weight: 500;
 }
 nav a {
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     color: rgb(255, 123, 0);
 }
 nav a:hover {
     transition: color 0.4s, 0.4s;
     color: red;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: underline;
 }
 .logo:active img {
@@ -84,6 +104,7 @@ nav a:hover {
 }
 .footerReseaux a {
     padding: 2%;
+    width: 40px;
 }
 
 .footerReseaux p {
@@ -141,9 +162,9 @@ a.headerButton {
     text-align: left;
     border-width: 2px;
     padding: 5px 5px 5px 5px;
-    border-color: #d4c254;
+    border-color: seagreen;
     border-style: solid;
-    color: #d4c254;
+    color: rgb(106, 215, 153);
     font-size: 0.9rem;
     font-weight: 600;
     padding: 10px 10px 8px 10px;
@@ -155,11 +176,11 @@ a.headerButton {
 .a.headerButton:hover {
     transition: color 0.4s, 0.4s;
     text-align: left;
-    background-color: #d4c254;
+    background-color: seagreen;
     border-width: 2px;
-    border-color: #d4c254;
+    border-color: rgb(30, 255, 128);
     border-style: solid;
-    color: #141115;
+    color: rgb(252, 144, 43);
     font-size: 0.9rem;
     font-weight: 600;
     padding: 10px 10px 8px 10px;
@@ -172,10 +193,10 @@ a.headerButton {
 
 img.clientsatisfaitimage {
     border-radius: 50%;
-    max-width: 27%;
+    max-width: 25%;
     margin-left: 3%;
     margin-top: 2%;
-    border: 4px solid #d4c254;
+    border: 4px solid rgb(251, 207, 166);
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -199,8 +220,11 @@ img.clientsatisfaitimage {
     box-sizing: border-box;
 }
 .grid-items p {
-    font-style: italic;
-    margin: 1% 5% 3% 5%;
+    margin: 3% 5% 3% 5%;
+    padding-top: 3%;
+    font-family: "Oregano", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 .grid-in {
     display: flex;
@@ -365,8 +389,8 @@ section {
     margin: 5% 0%;
 }
 .restaurantBox {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 30% 70%;
     width: 100%;
 }
 .restoBoxContact {
@@ -475,39 +499,71 @@ tfoot td {
 
 /* Media Queries 
 ========================================================================== */
+@media screen and (max-width: 1200px) {
+    .mediaQueries {
+        margin: 0% 1%;
+        padding: 0% 1%;
+    }
+    .flexS1-2 {
+        width: 45%;
+    }
+    .flexS1-1 {
+        width: 50%;
+    }
+}
 
-/* M-Q Header 960px
+/* M-Q Header / footer 960px
 ==================================================*/
-@media screen and (min-width: 570px) and (max-width: 960px) {
+@media screen and (min-width: 571px) and (max-width: 960px) {
     body {
         background-color: red;
     }
+
     nav {
         display: none;
     }
+
     .logoMenu {
         display: block;
     }
+
     .flexHead {
         justify-content: space-around;
     }
-    /* M-Q Main 960px
-==================================================*/
-    .flexSection1 {
-        flex-direction: column;
-        justify-content: space-between;
+
+    .flexEND {
+        grid-template-columns: 40% 60%;
     }
 
-    .flexS1-1 {
-        width: 90%;
-        line-height: 1rem;
-        margin-bottom: 2%;
+    .footerReseaux a {
+        width: 40px;
     }
-    /* M-Q Resto 960px
-==================================================*/
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #footerIndex p {
+        font-size: 0.8rem;
+    }
+
+    /* INDEX------------------------------------------------------------------ */
+    .flexS1-2,
+    .flexS1-1 {
+        width: 100%;
+    }
+
+    .flexSection1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        width: 100%;
+        margin-bottom: 6%;
+    }
     .grid-container {
         grid-template-columns: 50% 50%;
     }
+
     img.clientsatisfaitimage {
         max-width: 25%;
     }
@@ -517,30 +573,41 @@ tfoot td {
         grid-template-rows: auto;
     }
 
-    .big1 {
-        grid-column: 1 / 3;
-        grid-row: auto;
-    }
+    /* RESTO ------------------------------------------------------------------*/
 
+    .big1,
     .big2 {
         grid-column: 1 / 3;
         grid-row: auto;
     }
+    .restaurantBox {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-top: 15%;
+    }
+
+    .map-container {
+        margin-top: 20px;
+        height: 250px;
+    }
+
     .map-container iframe {
         width: 100%;
-        height: 450px;
+        height: 100%;
         border: 0;
     }
-    .map-container {
-        margin-top: 20%;
+
+    .restoBoxContact p,
+    .restoBoxContact a {
+        font-size: 0.7rem;
     }
+
     .mediaQueries {
-        margin: 0% 5%;
         padding: 0% 5%;
     }
 }
 
-/* M-Q Header 570px
+/* M-Q Header / footer 570px
 ==================================================*/
 @media screen and (max-width: 570px) {
     body {
@@ -555,21 +622,34 @@ tfoot td {
     .flexHead {
         justify-content: space-around;
     }
+    .flexEND {
+        grid-template-columns: 30% 70%;
+    }
+    .footerReseaux a {
+        width: 29px;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    #footerIndex p {
+        font-size: 0.7rem;
+    }
 
     /* M-Q Main 570px
 ==================================================*/
+    .flexS1-2,
+    .flexS1-1 {
+        width: 100%;
+    }
     .flexSection1 {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
         margin-bottom: 6%;
     }
-    .flexS1-1 {
-        width: 90%;
-        line-height: 1rem;
-        margin-bottom: 2%;
-    }
+
     .grid-container {
         display: grid;
         grid-template-columns: 100%;
@@ -582,18 +662,27 @@ tfoot td {
     .grid-container2 {
         grid-template-columns: 1fr;
     }
-
+    /* RESTO ------------------------------------------------------------------*/
     .big1,
     .big2 {
         grid-column: auto;
         grid-row: auto;
     }
-    .map-container {
-        margin-top: 50%;
-        height: 200px;
+    .restaurantBox {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-top: 45%;
     }
-    .restoBoxContact {
-        justify-content: flex-end;
+
+    .map-container {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
     .restoBoxContact p {
         font-size: 0.7rem;
@@ -601,8 +690,8 @@ tfoot td {
     .restoBoxContact a {
         font-size: 0.7rem;
     }
+
     .mediaQueries {
-        margin: 0% 5%;
         padding: 0% 5%;
     }
 }
