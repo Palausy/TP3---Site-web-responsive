@@ -35,7 +35,6 @@ figcaption {
 }
 body {
     font-family: "Zalando Sans Expanded", sans-serif;
-    font-optical-sizing: auto;
 }
 /* Mise en page (positionnement)
 ========================================================================== */
@@ -340,7 +339,7 @@ textarea {
 }
 .form-group {
     display: flex;
-    direction: column;
+    flex-direction: column;
     justify-content: start;
     align-items: center;
 }
@@ -528,7 +527,7 @@ tfoot td {
     }
 
     .flexHead {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .flexEND {
@@ -620,7 +619,7 @@ tfoot td {
         display: block;
     }
     .flexHead {
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .flexEND {
         grid-template-columns: 30% 70%;
