@@ -19,7 +19,18 @@ p {
     padding: 1%;
 }
 h2 {
-    color: seashell;
+    color: rgb(255, 123, 0);
+    text-shadow: black 1px 1px 2px;
+}
+.indexTitreH2 {
+    color: rgb(38, 37, 36);
+    background-color: seagreen;
+    padding: 2%;
+    text-align: center;
+}
+
+.indexTitreH3 {
+    color: rgb(255, 123, 0);
 }
 figcaption {
     text-align: center;
@@ -333,13 +344,19 @@ input {
 }
 textarea {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: 120px;
     resize: none;
 }
-.form-group {
+.areaSpace {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    margin: 2% 0%;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: center;
 }
@@ -391,6 +408,7 @@ section {
     display: grid;
     grid-template-columns: 30% 70%;
     width: 100%;
+    margin-top: 3%;
 }
 .restoBoxContact {
     display: flex;
@@ -443,7 +461,7 @@ section {
     grid-template-columns: 70% 30%;
 }
 .tableau50 h2 {
-    margin-bottom: 0%;
+    margin-bottom: 0.3%;
 }
 table {
     width: 90%;
@@ -456,8 +474,8 @@ td {
 th {
     text-align: left;
     padding: 2%;
-    color: rgb(255, 123, 0);
-    text-shadow: black 1px 1px 2px;
+    color: rgb(38, 37, 36);
+
     font-size: 1.2rem;
     text-align: center;
 }
@@ -509,13 +527,28 @@ tfoot td {
     .flexS1-1 {
         width: 50%;
     }
+    /* MQ reservation 1200px
+========================================================================== */
+    .form-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .contact22 {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
 
 /* M-Q Header / footer 960px
 ==================================================*/
 @media screen and (min-width: 571px) and (max-width: 960px) {
-    body {
-        background-color: red;
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.4rem;
     }
 
     nav {
@@ -604,14 +637,70 @@ tfoot td {
     .mediaQueries {
         padding: 0% 5%;
     }
+    /* Reservation 960px ------------------------------------------------------------------*/
+    .form-container {
+        grid-template-columns: 100%;
+    }
+
+    .contact22 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact1 {
+        flex-direction: column;
+    }
+    .form-group {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+    }
+    .contact1 .form-group {
+        width: 100%;
+    }
+    form {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+    .form-submit {
+        font-size: 1.4rem;
+    }
+    /* Ma Commande  960px------------------------------------------------------------------*/
+    table {
+        font-size: 0.8rem;
+    }
+    th {
+        font-size: 1rem;
+    }
+    .tableau50 {
+        display: flex;
+        flex-direction: column;
+    }
+    .commandeTableau4 {
+        width: 60%;
+        margin: 2% 0% 0% 16%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .commandeTableau4 .a.headerButton {
+        display: flex;
+        justify-content: center;
+    }
+    .commandeTableau4 td {
+        font-size: 0.9rem;
+    }
+    .promo {
+        display: none;
+    }
 }
 
 /* M-Q Header / footer 570px
 ==================================================*/
 @media screen and (max-width: 570px) {
-    body {
-        background-color: rgb(0, 255, 110);
-    }
     nav {
         display: none;
     }
@@ -636,6 +725,12 @@ tfoot td {
 
     /* M-Q Main 570px
 ==================================================*/
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
     .flexS1-2,
     .flexS1-1 {
         width: 100%;
@@ -661,7 +756,7 @@ tfoot td {
     .grid-container2 {
         grid-template-columns: 1fr;
     }
-    /* RESTO ------------------------------------------------------------------*/
+    /* RESTO  570px------------------------------------------------------------------*/
     .big1,
     .big2 {
         grid-column: auto;
@@ -692,5 +787,71 @@ tfoot td {
 
     .mediaQueries {
         padding: 0% 5%;
+    }
+    /* Reservation  570px------------------------------------------------------------------*/
+
+    .form-container {
+        grid-template-columns: 100%;
+    }
+
+    .contact22 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact1 {
+        flex-direction: column;
+    }
+
+    .contact1 .form-group {
+        width: 100%;
+    }
+    .form-group {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+    }
+    textarea {
+        max-width: 100%;
+    }
+    form {
+        font-size: 0.7rem;
+    }
+    .form-submit {
+        font-size: 1.2rem;
+    }
+    .formSend {
+        font-size: 1.2rem;
+    }
+    .formSend p {
+        font-size: 1.2rem;
+    }
+    /* Ma Commande  570px------------------------------------------------------------------*/
+    table {
+        font-size: 0.7rem;
+    }
+    th {
+        font-size: 0.9rem;
+    }
+    .tableau50 {
+        display: flex;
+        flex-direction: column;
+    }
+    .commandeTableau4 {
+        width: 60%;
+        margin: 2% 0% 0% 16%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .commandeTableau4 .a.headerButton {
+        display: flex;
+        justify-content: center;
+    }
+    .commandeTableau4 td {
+        font-size: 0.9rem;
+    }
+    .promo {
+        display: none;
     }
 }
