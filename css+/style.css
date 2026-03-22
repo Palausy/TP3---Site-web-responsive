@@ -1,0 +1,858 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Knewave&family=Oregano:ital@0;1&family=Pacifico&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+/* Typographies / Couleurs (exemples : titres, paragraphes, liens, etc.)
+========================================================================== */
+h1 {
+    color: rgb(38, 37, 36);
+    background-color: seagreen;
+    padding: 2%;
+    text-align: center;
+}
+p {
+    color: rgb(255, 123, 0);
+    font-size: 1rem;
+    padding: 1%;
+}
+h2 {
+    color: rgb(255, 123, 0);
+    text-shadow: black 1px 1px 2px;
+}
+.indexTitreH2 {
+    color: rgb(38, 37, 36);
+    background-color: seagreen;
+    padding: 2%;
+    text-align: center;
+    text-shadow: black 0px 0px 0px;
+}
+
+.indexTitreH3 {
+    color: rgb(255, 123, 0);
+}
+figcaption {
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+.maCommande {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+body {
+    font-family: "Zalando Sans Expanded", sans-serif;
+}
+/* Mise en page (positionnement)
+========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mediaQueries {
+    padding: 0% 1%;
+}
+
+.flexHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    background-color: rgb(38, 37, 36);
+}
+
+/* Header / Navigations / Footer 
+========================================================================== */
+nav {
+    text-align: right;
+    width: 75%;
+    align-items: center;
+}
+nav ul {
+    margin-right: 2%;
+    padding-left: 2%;
+}
+nav li {
+    display: inline-block;
+    text-align: center;
+    margin: 0% 1%;
+    padding: 0% 1%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+nav a {
+    font-weight: 400;
+    text-decoration: none;
+    color: rgb(255, 123, 0);
+}
+nav a:hover {
+    transition: color 0.4s, 0.4s;
+    color: red;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.logo:active img {
+    content: url("../media/logoGB2.png");
+}
+.flexFooter {
+    color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+.footerReseaux {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footerReseaux a {
+    padding: 2%;
+    width: 40px;
+}
+
+.footerReseaux p {
+    padding: 2%;
+    white-space: nowrap;
+}
+.flexFooter2 {
+    color: rgb(255, 123, 0);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.flexFooter2 p {
+    text-decoration: underline;
+}
+.flexFooter2-1 {
+    display: flex;
+    justify-content: flex-end;
+}
+.flexFooter2-1 p {
+    text-decoration: underline;
+    margin: 0% 5%;
+}
+.flexEND {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    border-top: solid 4px black;
+}
+.logoMenu {
+    display: none;
+}
+
+/* Page d'accueil
+========================================================================== */
+.flexSection1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6%;
+}
+img {
+    width: 100%;
+}
+
+.flexS1-1 {
+    width: 30%;
+    line-height: 1.5rem;
+}
+.flexS1-2 {
+    width: 65%;
+    border: solid 4px rgb(255, 123, 0);
+}
+a.headerButton {
+    text-align: left;
+    border-width: 2px;
+    padding: 5px 5px 5px 5px;
+    border-color: seagreen;
+    border-style: solid;
+    color: rgb(106, 215, 153);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 10px 8px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.a.headerButton:hover {
+    transition: color 0.4s, 0.4s;
+    text-align: left;
+    background-color: seagreen;
+    border-width: 2px;
+    border-color: rgb(30, 255, 128);
+    border-style: solid;
+    color: rgb(252, 144, 43);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 10px 8px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+/*client satisfaits
+========================================================================== */
+
+img.clientsatisfaitimage {
+    border-radius: 50%;
+    max-width: 25%;
+    margin-left: 3%;
+    margin-top: 2%;
+    border: 4px solid rgb(251, 207, 166);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 4fr 4fr;
+}
+.grid-items {
+    border: solid 4px rgb(255, 123, 0);
+    margin: 3%;
+    background: linear-gradient(
+        to bottom,
+        #dc7e1f 0%,
+        #ebe3d5 50%,
+        #f7f0f5 100%
+    );
+    display: grid;
+    grid-template-rows: 45% 55%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.grid-items p {
+    margin: 3% 5% 3% 5%;
+    padding-top: 3%;
+    font-family: "Oregano", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.grid-in {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.grid-in p {
+    margin-top: 10%;
+    font-weight: 900;
+    font-size: large;
+    color: rgb(62, 36, 4);
+}
+/* Lien réseaux sociaux
+========================================================================== */
+.reseaux {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    max-width: 700px;
+    justify-content: space-between;
+}
+.container2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container2 {
+    background-color: rgb(255, 255, 255);
+}
+/* Réservation
+========================================================================== */
+.red-dot {
+    color: red;
+    font-weight: bold;
+}
+form {
+    color: rgb(214, 173, 134);
+    background-image: url("../media/bgLarge.jpg");
+    width: 100%;
+    background-size: cover;
+}
+.formBg {
+    background-color: #381e0483;
+    padding: 2%;
+}
+.formSendBg {
+    background-color: rgb(126, 237, 154);
+    padding: 2%;
+}
+.formSpace {
+    padding: 2%;
+    margin: 5% 0%;
+}
+legend {
+    font-weight: 900;
+}
+.contact1 {
+    display: flex;
+    gap: 20px;
+}
+
+.contact1 .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact1 input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+}
+.contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 2%;
+}
+.contact22 {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+.form-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+input {
+    margin: 2%;
+}
+#nbr-quantite {
+    width: 60px;
+}
+.formSend p {
+    border: solid 5px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgb(126, 237, 154);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 1% 5%;
+}
+.formSend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 120px;
+    resize: none;
+}
+.areaSpace {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 2% 0%;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+input {
+    background-color: rgba(95, 48, 4, 0.493);
+    color: antiquewhite;
+}
+
+/* Restaurant
+========================================================================== */
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(3, 3fr);
+    gap: 2%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(255, 123, 0);
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.big1 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+}
+
+.big2 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+}
+section {
+    margin: 5% 0%;
+}
+.restaurantBox {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    margin-top: 3%;
+}
+.restoBoxContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.pictograme {
+    width: 7%;
+    margin: 7px 4px 0px 0px;
+}
+.pictoFlexMain {
+    display: flex;
+    justify-content: space-between;
+}
+.pictoFlex {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 2%;
+    margin: 10% 0%;
+    text-align: left;
+    justify-content: space-between;
+}
+.pictoFlex a {
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+.pictoFlex p {
+    margin: 0%;
+    padding: 1%;
+    font-size: large;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Ma commande
+========================================================================== */
+.tableau50 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.tableau50 h2 {
+    margin-bottom: 0.3%;
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+th,
+td {
+    width: 33.33%;
+}
+th {
+    text-align: left;
+    padding: 2%;
+    color: rgb(38, 37, 36);
+
+    font-size: 1.2rem;
+    text-align: center;
+}
+td {
+    padding: 2%;
+    color: rgb(219, 206, 195);
+    text-align: center;
+}
+tfoot td {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgb(228, 217, 206);
+    text-shadow: black 1px 1px 2px;
+}
+
+.commandeTableau4 {
+    padding: 3%;
+    margin-top: 12%;
+    background-color: seagreen;
+}
+.commandeTableau4 table {
+    margin-bottom: 10%;
+}
+.commandeTableau4 a {
+    align-items: center;
+    color: #f1e49b;
+    background-color: rgb(72, 39, 7);
+    border-color: rgb(255, 123, 0);
+}
+.colorTableau {
+    background-color: seagreen;
+}
+.colorTableau th:first-child,
+.colorTableau td:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Media Queries 
+========================================================================== */
+@media screen and (max-width: 1200px) {
+    .mediaQueries {
+        margin: 0% 1%;
+        padding: 0% 1%;
+    }
+    .flexS1-2 {
+        width: 45%;
+    }
+    .flexS1-1 {
+        width: 50%;
+    }
+    /* MQ reservation 1200px
+========================================================================== */
+    .form-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .contact22 {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+/* M-Q Header / footer 960px
+==================================================*/
+@media screen and (min-width: 571px) and (max-width: 960px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logoMenu {
+        display: block;
+    }
+
+    .flexHead {
+        justify-content: space-between;
+    }
+
+    .flexEND {
+        grid-template-columns: 40% 60%;
+    }
+
+    .footerReseaux a {
+        width: 40px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #footerIndex p {
+        font-size: 0.8rem;
+    }
+
+    /* INDEX------------------------------------------------------------------ */
+    .flexS1-2,
+    .flexS1-1 {
+        width: 100%;
+    }
+
+    .flexSection1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        width: 100%;
+        margin-bottom: 6%;
+    }
+    .grid-container {
+        grid-template-columns: 50% 50%;
+    }
+
+    img.clientsatisfaitimage {
+        max-width: 25%;
+    }
+
+    .grid-container2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* RESTO ------------------------------------------------------------------*/
+
+    .big1,
+    .big2 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+    .restaurantBox {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-top: 15%;
+    }
+
+    .map-container {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .restoBoxContact p,
+    .restoBoxContact a {
+        font-size: 0.7rem;
+    }
+
+    .mediaQueries {
+        padding: 0% 5%;
+    }
+    /* Reservation 960px ------------------------------------------------------------------*/
+    .form-container {
+        grid-template-columns: 100%;
+    }
+
+    .contact22 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact1 {
+        flex-direction: column;
+    }
+    .form-group {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+    }
+    .contact1 .form-group {
+        width: 100%;
+    }
+    form {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+    .form-submit {
+        font-size: 1.4rem;
+    }
+    /* Ma Commande  960px------------------------------------------------------------------*/
+    table {
+        font-size: 0.8rem;
+    }
+    th {
+        font-size: 1rem;
+    }
+    .tableau50 {
+        display: flex;
+        flex-direction: column;
+    }
+    .commandeTableau4 {
+        width: 60%;
+        margin: 2% 0% 0% 16%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .commandeTableau4 .a.headerButton {
+        display: flex;
+        justify-content: center;
+    }
+    .commandeTableau4 td {
+        font-size: 0.9rem;
+    }
+    .promo {
+        display: none;
+    }
+}
+
+/* M-Q Header / footer 570px
+==================================================*/
+@media screen and (max-width: 570px) {
+    nav {
+        display: none;
+    }
+    .logoMenu {
+        display: block;
+    }
+    .flexHead {
+        justify-content: space-between;
+    }
+    .flexEND {
+        grid-template-columns: 30% 70%;
+    }
+    .footerReseaux a {
+        width: 29px;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    #footerIndex p {
+        font-size: 0.7rem;
+    }
+
+    /* M-Q Main 570px
+==================================================*/
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .flexS1-2,
+    .flexS1-1 {
+        width: 100%;
+    }
+    .flexSection1 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 6%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 4fr 4fr;
+    }
+    img.clientsatisfaitimage {
+        max-width: 20%;
+    }
+
+    .grid-container2 {
+        grid-template-columns: 1fr;
+    }
+    /* RESTO  570px------------------------------------------------------------------*/
+    .big1,
+    .big2 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .restaurantBox {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-top: 45%;
+    }
+
+    .map-container {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .restoBoxContact p {
+        font-size: 0.7rem;
+    }
+    .restoBoxContact a {
+        font-size: 0.7rem;
+    }
+
+    .mediaQueries {
+        padding: 0% 5%;
+    }
+    /* Reservation  570px------------------------------------------------------------------*/
+
+    .form-container {
+        grid-template-columns: 100%;
+    }
+
+    .contact22 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact1 {
+        flex-direction: column;
+    }
+
+    .contact1 .form-group {
+        width: 100%;
+    }
+    .form-group {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+    }
+    textarea {
+        max-width: 100%;
+    }
+    form {
+        font-size: 0.7rem;
+    }
+    .form-submit {
+        font-size: 1.2rem;
+    }
+    .formSend {
+        font-size: 1.2rem;
+    }
+    .formSend p {
+        font-size: 1.2rem;
+    }
+    /* Ma Commande  570px------------------------------------------------------------------*/
+    table {
+        font-size: 0.7rem;
+    }
+    th {
+        font-size: 0.9rem;
+    }
+    .tableau50 {
+        display: flex;
+        flex-direction: column;
+    }
+    .commandeTableau4 {
+        width: 60%;
+        margin: 2% 0% 0% 16%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .commandeTableau4 .a.headerButton {
+        display: flex;
+        justify-content: center;
+    }
+    .commandeTableau4 td {
+        font-size: 0.9rem;
+    }
+    .promo {
+        display: none;
+    }
+}
